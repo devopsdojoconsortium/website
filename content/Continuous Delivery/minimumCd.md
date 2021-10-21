@@ -12,7 +12,7 @@ graph BT
 TBD([Trunk-based Development])-->CI
 CI([Continuous Integration])-->CD([Continuous Delivery])
 DTT([All changes integrate into the trunk])-->TBD
-SLFB([If branches from trunk are used:])-->TBD
+SLFB([Optional: short-lived branches])-->DTT
 A([They originate from the trunk])-->SLFB
 B([They re-integrate to the trunk])-->SLFB
 C([They are short-lived and removed after the merge])-->SLFB
