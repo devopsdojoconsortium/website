@@ -8,7 +8,7 @@ theme = "hugo-theme-learn"
 home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]] 
-name = "<i class='fab fa-github'></i> SADBOK"
+name = "<i class='fab fa-github'></i> Contribute"
 identifier = "ds"
 url = "https://github.com/devopsdojoconsortium/website"
 weight = 10
