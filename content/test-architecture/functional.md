@@ -1,7 +1,7 @@
 ---
 draft: true
 title: Component Functional Testing
-navTitle: Functional Testing
+menuTitle: Functional Testing
 
 tags:
   - test

@@ -1,22 +1,18 @@
 ---
-draft: true
-title: Getting Started with CD
+title: Continuous Delivery
 tags:
   - cd
 ---
 
 - [Introduction to CD](#introduction-to-cd)
 - [Goals](#goals)
-- [CD Maturity](#cd-maturity)
-    - [Minimums](#minimums)
-    - [Good](#good)
-  - [Continuous Integration](#continuous-integration)
+  - [Minimum Viable CD](#minimum-viable-cd)
   - [Continuous Delivery/Deploy](#continuous-deliverydeploy)
 - [CD Anti-Patterns](#cd-anti-patterns)
-    - [Work breakdown](#work-breakdown)
-    - [Workflow Management](#workflow-management)
-    - [Teams](#teams)
-    - [Testing Process](#testing-process)
+    - [Poor work breakdown](#poor-work-breakdown)
+    - [Poor workflow Management](#poor-workflow-management)
+    - [Poor team structure](#poor-team-structure)
+    - [Immature testing process](#immature-testing-process)
 - [Recommended Practices](#recommended-practices)
   - [Pipeline](#pipeline)
   - [Short CI Cycle Time](#short-ci-cycle-time)
@@ -39,18 +35,6 @@ Continuous delivery is the ability to deliver the latest changes on-demand. CD i
 
 CD is not a reckless throwing of random change into production. Instead, it is a disciplined team activity of relentlessly automating all of the validations required for a release candidate, improving the speed and reliability of quality feedback, and collaborating to improve the quality of the information used to develop changes.
 
-CD is based on and extends the extreme programming practice of continuous integration. There is no CD without CI.
-
-The path to continuous integration and continuous delivery may seem daunting to teams that are just starting out. We offer this guide to getting started with a focus on outcome metrics to track progress.
-
-<a href="../../CD_Pipeline_Full_Tranparent.png" target="_blank">
- <img src="../../CD_Pipeline_Full_Tranparent.png" width="100%">
-</a>
-
-Continuous Delivery is far more than automation. It is the entire cycle of identifying value, delivering the value, and verifying
-with the end user that we delivered the expected value. The shorter we can make that feedback loop, the better our bottom line will
-be.
-
 ---
 
 ## Goals
@@ -59,46 +43,9 @@ Both CI and CD are behaviors intended to improve certain goals. CI is very effec
 
 The relentless improvement of how we implement CD reduces overhead, improves quality feedback, and improves both the outcomes of the end-user and the work/life balance of the team.
 
-## CD Maturity
+### Minimum Viable CD
 
-It has been common for organizations to apply "maturity models" to activities such as CD. However, this has been found to lead to cargo culting and aligning goals to the process instead of the outcomes. Understanding what capabilities you have and what capabilities need to be added to fully validate and operate changes are important, but the goals should always align to improving the flow of value delivery to the end-user. This requires analyzing every process from idea to delivery and identifying what should be removed, what should be automated, and how we can continuously reduce the size of changes delivered.
-
-There should never be an understanding that we are "mature" or "immature" with delivery. We can always improve. However, there should be an understanding of what competency looks like.
-
-#### Minimums
-
-Each developer on the team has tested changes integrated into the trunk at least daily.
-Changes always use the same process to deliver. There is no difference between deploying a feature or a fix.
-There are no manual quality gates.
-Changes are made using a trunk-based development pattern.
-All test and production environments use the same artifact. If the release cadence requires release branches, then the release branches deploy to all test environments and to production.
-
-#### Good
-
-New work requires less than 2 days from start to delivery
-All changes deliver from the trunk
-The time from committing change and delivery to production is less than 60 minutes
-Less than 5% of changes require remediation
-The time to restore service is less than 60 minutes.
-
-### Continuous Integration
-
-This working agreement for CI puts focus on developing teamwork and delivering quality outcomes while removing waste.
-
-- Branches originate from Trunk.
-- Branches are deleted in less than 24 hours.
-- Changes must be tested and not break existing tests before merging to trunk.
-- Changes are not required to be "feature complete".
-- Helping the team complete work in progress (code review, pairing) is more important than starting
-  new work.
-- Fixing a broken build is the team's highest priority.
-
-**Desired outcomes:**
-
-- [More frequent](./metrics/integration-frequency.html) integration of smaller, higher quality, lower risk changes.
-- More efficient and effective test architecture
-- [Lean code review process](code-review)
-- Reduced [Work In Progress](workflow-management/limiting-wip) (WIP)
+We recommend the definition from [MinimumCD.org](https://minimumcd.org) as the baseline for "we are starting CD". If those capabilities are not in place, resolving them will help make things better.
 
 ### Continuous Delivery/Deploy
 
@@ -115,14 +62,14 @@ This working agreement for CI puts focus on developing teamwork and delivering q
 
 ## CD Anti-Patterns
 
-#### Work breakdown
+#### Poor work breakdown
 
 | Issue                 | Description                                      | Good Practice                                                                                                                     |
 | --------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
 | Unclear requirements  | Stories without testable acceptance criteria     | Work should be defined with acceptance tests to improve clarity and enable developer driven testing.                              |
 | Long development Time | Stories take too long to deliver to the end user | Use BDD to decompose work to testable acceptance criteria to find smaller deliverables that can be completed in less than 2 days. |
 
-#### Workflow Management
+#### Poor workflow Management
 
 | Issue                                   | Description                                                                                                                                                                                                           | Good Practice                                                                                                                                                                                |
 | --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -135,7 +82,7 @@ This working agreement for CI puts focus on developing teamwork and delivering q
 | One or fewer deliveries per sprint      | The sprint results in one or fewer changes that are production ready                                                                                                                                                  | Sprints are planning increments, not delivery increments. Plan what will be delivered daily during the sprint. Uncertainty increases with time. Distant deliverables need detailed analysis. |
 | Pre-assigned work                       | Assigning the list of tasks each person will do as part of sprint planning. This results in each team member working in isolation on a task list instead of the team focusing on delivering the next high value item. | The whole team should own the team's work. Work should be pulled in priority sequence and the t4eam should work daily to remove knowledge silos.                                             |
 
-#### Teams
+#### Poor team structure
 
 | Issue                | Description                                                                                                                                                                                       | Good Practice                                                                                                                                                    |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -143,7 +90,7 @@ This working agreement for CI puts focus on developing teamwork and delivering q
 | Poor teamwork        | Poor communication between team members due to time delays or "expert knowledge" silos                                                                                                            | Make sure there is sufficient time overlap and that specific portions of the system are not assigned to individuals                                              |
 | Multi-team deploys   | Requiring more than one team to deliver synchronously reduces the ability to respond to production issues in a timely manner and delays delivery of any feature to the speed of he slowest teams. | Make sure all dependencies between teams are handled in ways that allow teams to deploy independently in any sequence.                                           |
 
-#### Testing Process
+#### Immature testing process
 
 | Issue              | Description                                                                                                | Good Practice                                                                                                                                                              |
 | ------------------ | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

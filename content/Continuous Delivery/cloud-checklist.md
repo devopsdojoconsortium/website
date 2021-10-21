@@ -1,6 +1,6 @@
 ---
-draft: true
 title: Cloud Native Checklist
+
 tags:
   - cd
 ---

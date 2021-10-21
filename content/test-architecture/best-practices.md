@@ -2,7 +2,7 @@
 draft: true
 title: Testing Best Practices
 weight: 2
-navTitle: Best Practices
+menuTitle: Best Practices
 tags:
   - test
 ---

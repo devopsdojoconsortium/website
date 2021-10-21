@@ -1,6 +1,7 @@
 ---
 draft: true
 title: Glossary
+
 tags:
   - glossary
 ---

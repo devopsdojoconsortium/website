@@ -1,7 +1,7 @@
 ---
-draft: true
 title: 24 Capabilities to Drive Improvement
-navTitle: DORA Recommendations
+menuTitle: DORA Recommendations
+
 tags:
   - cd
 ---

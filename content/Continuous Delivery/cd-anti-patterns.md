@@ -1,5 +1,4 @@
 ---
-draft: true
 title: Common Blockers
 weight: 1
 tags:
