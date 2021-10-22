@@ -43,7 +43,7 @@ weight = 10
   # If set to true, prevents Hugo from including the mermaid module if not needed (will reduce load times and traffic)
   disableMermaid = false
   # Specifies the remote location of the mermaid js
-  customMermaidURL = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+  customMermaidURL = "https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.13.3/mermaid.min.js"
   # Hide Next and Previous page buttons normally displayed full height beside content
   disableNextPrev = true
   # Order sections in menu by "weight" or "title". Default to "weight"
