@@ -11,7 +11,7 @@ See MinimumCd.org(https://minimumcd.org)
 {{<mermaid align="center">}}
 
 %%{init: { 'theme': 'base', 'themeVariables': { 'primaryColor': '#327fa8', 'primaryTextColor': '#f0f3f5'}}}%%
-graph TB
+flowchart TB
 %%{config: { 'fontFamily': 'Menlo', 'fontSize': 8, 'fontWeight': 400} }%%
 CI[[Continuous Integration]]
 CD(Continuous Delivery)
