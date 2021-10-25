@@ -77,16 +77,6 @@ estimate/average based on your teams feedback.
 - Review and maintain value stream map to show wins associated to your team's improvement plan.
 - Take into account all potential flows for team processes, and value stream those as well.
 
-## Value
-
-As a team, we want to understand how to value stream map our team processes, so that we may understand our constraints
-to delivery and identify ways to improve.
-
-## Acceptance Criteria
-
-- Value stream all things associated to delivering value.
-- Create action items of improvement from exercise.
-
 ## References
 
 - [Value Stream Mapping Guide](https://creately.com/blog/diagrams/value-stream-mapping-guide/)
