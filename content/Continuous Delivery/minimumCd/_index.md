@@ -6,25 +6,36 @@ tags:
 
 See MinimumCd.org(https://minimumcd.org)
 
-%%{init: { 'theme': 'base', 'themeVariables': { 'primaryColor': '#327fa8', 'primaryTextColor': '#f0f3f5'}}}%% flowchart TB %%{config: { 'fontFamily': 'Menlo', 'fontSize': 8, 'fontWeight': 400} }%% 
-
 {{<mermaid align="left">}}
 
-graph
+flowchart TD
+TBD ==> CI
+CI ==> CD
+CD(Continuous Delivery)
 
-CI[[Continuous Integration]] 
-CD(Continuous Delivery) 
-TBD[[Trunk-based Development]]
+subgraph CI
+    subgraph "Continuous Integration" TD
+        CIC(Tested with other work automatically on merge)
+        CIA(Integrates to trunk at least daily)
+        CIB(Automated testing before merge to trunk)
+        CIE(New work does not break delivered work)
+        CID(All feature work stops when build is red)
 
-CD ==> CI CI ==> TBD CI --> CIA(Integrates to trunk at least daily) 
-CI --> CIB(Automated testing before merge to trunk) 
-CI --> CIC(Tested with other work automatically on merge) 
-CI --> CID(All feature work stops when build is red) 
-CI --> CIE(New work does not break delivered work)
+        CIx(CI) --- CIC
+        CIC --- CIA
+        CIA --- CIB
+        CIB --- CIE
+        CIE --- CID
+    end
+end
 
-TBD --> BRANCH{Use branches?} 
-BRANCH -- No --> DTT(Push to Trunk) 
-BRANCH -- Yes --> SLFB(Branches) SLFB --> A(Originate from trunk Re-integrate to trunk) 
-SLFB --> C(Short-lived Removed after merge)
+subgraph TBD
+    subgraph "Trunk-based Development" TD
+        BRANCH{Use branches?} -- No --- DTT(Push to Trunk)
+        BRANCH -- Yes --- SLFB(Branches)
+        SLFB --- A(Originate from trunk Re-integrate to trunk)
+        SLFB --- C(Short-lived Removed after merge)
+    end
+end
 
 {{</mermaid>}}
