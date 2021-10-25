@@ -75,22 +75,6 @@ Visually distinguish important information.
 - Is this work blocked from progressing?
 - Have we reached our WIP limit?
 
----
-
-## Value
-
-As a team, we want to limit our WIP, so that we may deliver the most valuable
-thing first.
-
----
-
-## Acceptance Criteria
-
-- Set a WIP limit within reason and follow it shamelessly.
-- Work on one thing at a time.
-
----
-
 ## References
 
 [Making Work Visible](https://itrevolution.com/book/making-work-visible/) - Dominica DeGrandis

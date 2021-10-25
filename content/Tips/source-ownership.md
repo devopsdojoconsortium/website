@@ -20,18 +20,6 @@ what's happening in the code._**
 - Teams looking to create an [InnerSourcing](../innersource) policy can start by applying their Definition of Done to any external contributions.
 - If any developer on the team does not have the ability to merge code, ask "Why?".
 
-## Value
-
-As a team we want to create a culture of source ownership so that we can increase our product understanding, code quality, and delivery speed.
-
-## Acceptance Criteria
-
-- No contributions to source bypass the team's approval.
-- Automated pipelines validate that PRs from internal and external contributors conform to quality standards.
-- All team members have access to merge to trunk.
-- [InnerSourcing](../innersource) and/or external contributions **fork the repository they do not branch**.
-- Teams no larger than 12 people per team.
-
 ## References
 
 - Go check out the [CD Anti Patterns](../../continuous-delivery/cd-anti-patterns)

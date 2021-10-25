@@ -1,6 +1,6 @@
 ---
 draft: true
-title: DevOps Learning Path
+title: Learning Path
 weight: 1
 ---
 

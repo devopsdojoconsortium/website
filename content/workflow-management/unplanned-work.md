@@ -49,11 +49,3 @@ Planned capacity should fall between 60% and 80% of a team's max capacity.
   what kind of unplanned work is making it to your team's backlog.
 - Make work visible, planned and unplanned, and categorize unplanned work based on value and urgency.
 
----
-
-### Value
-
-As a development team, we want to understand how to plan for unplanned work, so that we can reduce
-risk and uncertainty for our deliverables.
-
----

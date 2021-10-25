@@ -2,6 +2,7 @@
 title: Continuous Delivery
 tags:
   - cd
+weight: 1
 ---
 
 - [Introduction to CD](#introduction-to-cd)

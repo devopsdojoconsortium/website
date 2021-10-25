@@ -41,18 +41,3 @@ developers' skills."
 ## References
 
 - [The 10 commandments of navigating code reviews](https://techbeacon.com/app-dev-testing/10-commandments-navigating-code-reviews)
-
-## Value
-
-- Finds issues before deployment, saving time and money.
-- Increased [Quality](../../metrics/quality).
-- Decreased [Change Failure Rate](../../metrics/change-fail-rate).
-
-## Acceptance Criteria
-
-- Automated checks for standards and complexity.
-- Code is reviewed for testing and clarity.
-- Pull requests are small and last no more then a day.
-- CI tests run upon opening and modifying pull requests.
-
----
